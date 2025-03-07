@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-I've already clone the resp
-=======
 I've already clone the resp
 
 I've already check the documents
 
 I've modify sometings
->>>>>>> Stashed changes

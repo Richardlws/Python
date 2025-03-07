@@ -140,9 +140,32 @@ def day_of_week(day):
 
 print(day_of_week(3))
 
-  '''
-import example
 
-print(example.zhouchang(3))
+def func(x):
+    return x
+print(func([1,2,3])*2)
 
 
+def foo(arr):
+    i=0
+    j=1
+    for i in range(len(arr)):
+        print(f"i={i},j={j},list={arr}")
+        for j in range(i+1,len(arr)):
+            print(f"i={i},j={j},list={arr}")
+            if arr[j] < arr[i]:
+               arr[i],arr[j] = arr[j],arr[i]
+               #print(f"i={i},j={j},list={arr}")
+    return arr
+
+print(foo([3,8,1,5,2]))
+
+#array=[3,8,1,5,2]
+#foo(array)
+#print(len(array))
+#for i in range(len(array)):
+#        for j in range(i+1,len(array)):
+#            if array[j] < array[i]:
+#               array[i],array[j] = array[j],array[i]
+#print(array)
+'''

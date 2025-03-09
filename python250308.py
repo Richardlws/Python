@@ -52,4 +52,59 @@ if __name__=="__main__":
     x()
 '''
 
+def show_balance():
+    print("***************************")
+    print(f"Your balance is $ {balance:.2f}")
+def deposit():
+    amount=float(input("Enter your deposit: "))
+    if amount < 0:
+        print("Invalid input")
+        return 0
+    else:
+        return amount
+        #return balance
+def withdraw():
+    amount=float(input("Enter your withdraw: "))
+    if amount > balance:
+        print("insufficiency")
+        return 0
+    elif amount < 0:
+        print("The amount should be more than 0")
+        return 0
+    else:
+        return amount
+        #return balance
+
+
+#main()
+#show_banlance(200)
+#deposit(50)
+#withdraw(250)
+
+def main():
+    balance=0
+    is_running=True
+    while is_running:
+        print("-------------Bank Programme-------------")
+        print("1.Show your banlance")
+        print("2.Enter your deposit")
+        print("3.Enter your withdraw")
+        print("4.Exit")
+        num=int(input("Please input your choice(1-4): "))
+        if num==1:
+            show_balance()
+        elif num==2:
+            balance+=deposit()
+        elif num==3:
+            balance-=withdraw()
+        elif num==4:
+            is_running=False
+        else:
+            print("Invalid input")
+    print("Thanks for using")
+
+if __name__=="__main__":
+    main()
+
+
 

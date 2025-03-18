@@ -165,7 +165,7 @@ else:
 
 
 
-'''
+
 
 txt_data = "I like pizza!"
 file_path="output.txt"
@@ -177,6 +177,33 @@ with open(file_path,"x") as file:
 
 
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+from bs4 import BeautifulSoup
+
+# 1. 启动 Chrome 浏览器（确保安装 `chromedriver`）
+driver = webdriver.Edge()
+
+# 2. 访问百度首页
+driver.get("https://www.baidu.com")
+
+# 3. 等待页面加载
+time.sleep(2)
+
+# 4. 获取完整的 HTML
+html = driver.page_source
+soup = BeautifulSoup(html, "html.parser")
+
+# 5. 提取标题
+if soup.title:
+    print("百度首页标题:", soup.title.text)
+else:
+    print("未找到 <title> 标签")
+
+# 6. 关闭浏览器
+driver.quit()
+'''
 
 
 

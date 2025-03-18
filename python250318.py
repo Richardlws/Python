@@ -101,3 +101,70 @@ if pokemon_info:
 '''
 
 
+#PyQt5 introduction
+import sys
+from PyQt5.QtWidgets import QApplication,QMainWindow
+from PyQt5.QtGui import QIcon
+width,height = 500,500
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("My cool first GUI")
+        self.setGeometry(1000,500,width,height)
+        #self.setWindowIcon(QIcon("profile_pic.jpg"))
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
